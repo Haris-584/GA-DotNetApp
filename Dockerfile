@@ -11,7 +11,11 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /App
 COPY --from=build-env /App/out .
+
+# Set a placeholder for the version number
+ENV APP_VERSION={{VERSION}}
+
 ENTRYPOINT ["dotnet", "DotNetApp.dll"]
