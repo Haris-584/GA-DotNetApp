@@ -16,6 +16,6 @@ WORKDIR /App
 COPY --from=build-env /App/out .
 
 # Set a placeholder for the version number
-ENV APP_VERSION=
+ENV APP_VERSION={{VERSION}}
 
 ENTRYPOINT ["dotnet", "DotNetApp.dll"]
