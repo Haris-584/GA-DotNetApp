@@ -35,8 +35,8 @@ jobs:
        # Manually set the version number you want to use
      - name: Set Version Number
        run: |
-          # Replace <your_version> with the desired version number
-          echo "export APP_VERSION=<your_version>" >> $GITHUB_ENV
+          # Replace 7.0 with the desired version number
+          echo "export APP_VERSION=7.0" >> $GITHUB_ENV
 
      - name: Check for Dockerfile changes
        run: |
