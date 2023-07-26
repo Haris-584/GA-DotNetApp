@@ -47,7 +47,7 @@ jobs:
 
      - name: Commit and Push Changes
        run: |
-          git config --local user.email "hariskhattak584@github.com"
+          git config --local user.email "hariskhattak584@gmail.com"
           git config --local user.name "Haris-584"
           git commit -m "Update Dockerfile version number" Dockerfile
           git push
